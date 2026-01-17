@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom">
+        <div class="container">
+            <a class="navbar-brand">
+                <img src="images/logo-energy-pilates.png" width="150">
+            </a>
+
+            <div class="collapse navbar-collapse show">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link"><i class="bi bi-list"></i> Bài viết</a></li>
+                    <li class="nav-item"><a class="nav-link"><i class="bi bi-film"></i> Video</a></li>
+                    <li class="nav-item"><a class="nav-link"><i class="bi bi-info-circle"></i> Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link"><i class="bi bi-calendar-event"></i> Sự kiện</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="bi bi-person"></i> Tài khoản
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item">Đăng nhập</a></li>
+                            <li><a class="dropdown-item">Quên mật khẩu</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link">Tiếng Việt</a></li>
+                    <li class="nav-item"><a class="nav-link">Tiếng Anh</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== CAROUSEL ========== -->
+    <div class="container-fluid p-4">
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+                <button data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+                <button data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+                <button data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/banner1.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/banner2.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/banner3.jpg" class="d-block w-100">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <div class="container">
+        <section class="row">
+
+            <!-- SIDEBAR -->
+            <aside class="col-sm-4">
+
+                <h4 class="text-info">Chuyên mục</h4>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item d-flex justify-content-between align-items-center active bg-info">
+                        Chế độ tập <span class="badge bg-primary rounded-pill">12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Chế độ dinh dưỡng <span class="badge bg-primary rounded-pill">15</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Cẩm nang cuộc sống <span class="badge bg-primary rounded-pill">99</span>
+                    </li>
+                </ul>
+
+                <div class="card mb-4">
+                    <div class="card-header text-info fw-bold">
+                        Bài viết nổi bật
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="d-flex mb-3">
+                            <img src="images/spinach_300x300.jpg" class="rounded-circle me-3" width="80" height="80">
+                            <div>
+                                <h6>Lợi ích khi ăn rau mỗi ngày</h6>
+                                <small class="text-muted">Tăng cường thể lực, kiểm soát cân nặng...</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-3">
+                            <img src="images/orange_300x300.jpg" class="rounded-circle me-3" width="80" height="80">
+                            <div>
+                                <h6>9 tác dụng tuyệt vời của quả cam</h6>
+                                <small class="text-muted">Chống lão hóa, tăng đề kháng...</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <img src="images/sesameoil_300x300.jpg" class="rounded-circle me-3" width="80" height="80">
+                            <div>
+                                <h6>10 công dụng bất ngờ từ dầu dừa</h6>
+                                <small class="text-muted">Dưỡng ẩm và tái tạo tế bào...</small>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- MAIN -->
+            <article class="col-md-8">
+
+                <h4 class="text-info mb-3">Tất cả bài viết</h4>
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h6>Phương pháp tập Pilates phục hồi cột sống <small><i
+                                            class="bi bi-chat-left-fill"></i> 16</small></h6>
+                            </div>
+                            <img src="images/tap-piltes.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text small">
+                                    Pilates giúp cải thiện vóc dáng và phục hồi chấn thương hiệu quả.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h6>1 giờ Pilates thay đổi cơ thể <small><i class="bi bi-chat-left-fill"></i> 8</small>
+                                </h6>
+                            </div>
+                            <img src="images/tap-pilates1.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text small">
+                                    Xây dựng cơ bắp săn chắc và dẻo dai.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h6>Pilates và tim mạch <small><i class="bi bi-chat-left-fill"></i> 5</small></h6>
+                            </div>
+                            <img src="images/tim-mach.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text small">
+                                    Tăng cường lưu thông máu và sức bền tim.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h6>Eat Clean nên ăn gì? <small><i class="bi bi-chat-left-fill"></i> 3</small></h6>
+                            </div>
+                            <img src="images/eat-clean.png" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text small">
+                                    Chế độ ăn sạch cho lối sống lành mạnh.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <nav class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link">&laquo;</a></li>
+                        <li class="page-item active"><a class="page-link">1</a></li>
+                        <li class="page-item"><a class="page-link">2</a></li>
+                        <li class="page-item"><a class="page-link">3</a></li>
+                        <li class="page-item"><a class="page-link">&raquo;</a></li>
+                    </ul>
+                </nav>
+
+            </article>
+
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        © Copyright by FPT Polytechnic
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
