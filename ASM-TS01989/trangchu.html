@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASM TS01989</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap JS (BẮT BUỘC) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+
+    <style>
+        .navbar-brand {
+            margin-right: 10px;
+            /* hoặc 0 nếu muốn sát hẳn */
+        }
+
+        /* Banner carousel */
+        .banner-img {
+            height: 420px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-info">
+        <div class="container">
+
+            <!-- LOGO -->
+            <a class="navbar-brand" href="trangchu.html">
+                <img src="images/logo1.png" alt="Logo" style="height: 50px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- MENU DÍNH SANG TRÁI -->
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="baiviet.html"><i class="fa-solid fa-list"></i> Bài viết</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sukien.html"><i class="fa-solid fa-calendar-days"></i> Sự kiện</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">
+                            <i class="fa-solid fa-circle-info"></i> Giới thiệu
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-user"></i> Tài khoản
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    Đăng nhập
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">
+                                    Đăng ký
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+   
+    <!-- BANNER -->
+    <div id="carouselExampleIndicators" class="carousel slide mb-4">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner rounded shadow-sm">
+            <div class="carousel-item active">
+                <img src="images/banner1.jpg" class="d-block w-100 banner-img" alt="Banner 1">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/banner2.jpg" class="d-block w-100 banner-img" alt="Banner 2">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/banner3.jpg" class="d-block w-100 banner-img" alt="Banner 3">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+
+
+    <!-- ===== MODAL ĐĂNG NHẬP ===== -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-right-to-bracket"></i> Đăng Nhập
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form class="was-validated">
+                    <div class="modal-body">
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Nhập email" required>
+                            <div class="invalid-feedback">
+                                Vui lòng nhập email
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" placeholder="Nhập mật khẩu" required>
+                            <div class="invalid-feedback">
+                                Vui lòng nhập mật khẩu
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-info text-white w-100">
+                            Đăng Nhập
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL ĐĂNG KÝ ===== -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-user-plus"></i> Đăng Ký Tài Khoản
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form class="was-validated">
+                    <div class="modal-body">
+
+                        <!-- Họ và tên -->
+                        <div class="mb-3">
+                            <label class="form-label">Họ và tên</label>
+                            <input type="text" class="form-control" placeholder="Nhập họ và tên" required>
+                            <div class="invalid-feedback">
+                                Vui lòng nhập họ và tên
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Nhập email" required>
+                            <div class="invalid-feedback">
+                                Vui lòng nhập email
+                            </div>
+                        </div>
+
+                        <!-- Số điện thoại -->
+                        <div class="mb-3">
+                            <label class="form-label">Số điện thoại</label>
+                            <input type="tel" class="form-control" placeholder="Nhập số điện thoại" required>
+                            <div class="invalid-feedback">
+                                Vui lòng nhập số điện thoại
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Mật khẩu -->
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Mật khẩu</label>
+                                <input type="password" class="form-control" placeholder="Nhập mật khẩu" required>
+                                <div class="invalid-feedback">
+                                    Vui lòng nhập mật khẩu
+                                </div>
+                            </div>
+
+                            <!-- Xác nhận mật khẩu -->
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Xác nhận mật khẩu</label>
+                                <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" required>
+                                <div class="invalid-feedback">
+                                    Vui lòng xác nhận mật khẩu
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Giới tính -->
+                        <div class="mb-3">
+                            <label class="form-label d-block">Giới tính</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" required>
+                                <label class="form-check-label">Nam</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" required>
+                                <label class="form-check-label">Nữ</label>
+                            </div>
+                            <div class="invalid-feedback d-block">
+                                Vui lòng chọn giới tính
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-info text-white w-100">
+                            Đăng Ký
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <!-- ===== VIDEO BÊN TRÁI ===== -->
+        <div class="col-md-8">
+
+            <h4 class="text-primary text-center mb-4">
+                <i class="fa-solid fa-mobile-screen"></i> VIDEO CÔNG NGHỆ – ĐỪNG BỎ LỠ
+            </h4>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <!-- Video 1 -->
+                <div class="col">
+                    <a href="video-detail?id=1" class="text-decoration-none text-dark">
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/iphone1.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h6 class="fw-bold">Đánh giá iPhone mới nhất</h6>
+                                <p class="small text-muted mb-0">
+                                    Hiệu năng, camera và pin có thực sự vượt trội?
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="col">
+                    <a href="video-detail?id=2" class="text-decoration-none text-dark">
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/samsung1.png" class="card-img-top">
+                            <div class="card-body">
+                                <h6 class="fw-bold">Samsung Galaxy – Có đáng mua?</h6>
+                                <p class="small text-muted mb-0">
+                                    Màn hình AMOLED và camera có gì nổi bật?
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="col">
+                    <a href="video-detail?id=3" class="text-decoration-none text-dark">
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/xiaomi1.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h6 class="fw-bold">Top điện thoại pin trâu 2026</h6>
+                                <p class="small text-muted mb-0">
+                                    Dùng cả ngày dài không lo sạc pin.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="col">
+                    <a href="video-detail?id=4" class="text-decoration-none text-dark">
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/ip sam1.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h6 class="fw-bold">So sánh iPhone và Android</h6>
+                                <p class="small text-muted mb-0">
+                                    Hệ điều hành nào phù hợp với bạn?
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Video 5 -->
+                <div class="col">
+                    <a href="video-detail?id=5" class="text-decoration-none text-dark">
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/vivo1.png" class="card-img-top">
+                            <div class="card-body">
+                                <h6 class="fw-bold">Điện thoại chụp ảnh đẹp nhất</h6>
+                                <p class="small text-muted mb-0">
+                                    Camera nào đang dẫn đầu?
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Video 6 -->
+                <div class="col">
+                    <a href="video-detail?id=6" class="text-decoration-none text-dark">
+                        <div class="card h-100 shadow-sm">
+                            <img src="images/meo1.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h6 class="fw-bold">Mẹo dùng điện thoại bền hơn</h6>
+                                <p class="small text-muted mb-0">
+                                    Kéo dài tuổi thọ pin & hiệu năng.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== BÀI VIẾT BÊN PHẢI ===== -->
+        <div class="col-md-4">
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white fw-bold">
+                    <i class="fa-solid fa-fire"></i> Bài viết nổi bật
+                </div>
+
+                <div class="card-body">
+
+                    <!-- Bài viết 1 -->
+                    <a href="post-detail?id=1" class="text-decoration-none text-dark d-block mb-3">
+                        <div class="d-flex align-items-center p-2 rounded hover-post">
+                            <img src="images/iphone1.jpg" class="rounded-circle me-3 border" width="70" height="70">
+                            <div>
+                                <h6 class="mb-1 fw-bold">iPhone – Hiệu năng & hệ sinh thái</h6>
+                                <small class="text-muted">
+                                    iOS ổn định, chip mạnh, bảo mật cao...
+                                </small>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Bài viết 2 -->
+                    <a href="post-detail?id=2" class="text-decoration-none text-dark d-block mb-3">
+                        <div class="d-flex align-items-center p-2 rounded hover-post">
+                            <img src="images/samsung1.png" class="rounded-circle me-3 border" width="70" height="70">
+                            <div>
+                                <h6 class="mb-1 fw-bold">Samsung Galaxy – Màn hình đỉnh</h6>
+                                <small class="text-muted">
+                                    AMOLED sắc nét, camera đa năng...
+                                </small>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Bài viết 3 -->
+                    <a href="post-detail?id=3" class="text-decoration-none text-dark d-block">
+                        <div class="d-flex align-items-center p-2 rounded hover-post">
+                            <img src="images/xiaomi1.jpg" class="rounded-circle me-3 border" width="70" height="70">
+                            <div>
+                                <h6 class="mb-1 fw-bold">Xiaomi – Cấu hình cao giá tốt</h6>
+                                <small class="text-muted">
+                                    Hiệu năng mạnh, pin trâu, giá hợp lý...
+                                </small>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="baiviet.html" class="btn btn-outline-primary px-5">
+            <i class="fa-solid fa-angles-right"></i> Xem thêm
+        </a>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-4 mt-4">
+        <div class="container">
+            <div class="row text-center text-md-start">
+
+                <!-- Thông tin -->
+                <div class="col-md-6 mb-3">
+                    <h5 class="text-info">FPT Polytechnic</h5>
+                    <p class="mb-1">
+                        <i class="fa-solid fa-phone"></i> Liên hệ: <b>0983 443 422</b>
+                    </p>
+                    <p class="mb-0">
+                        <i class="fa-solid fa-envelope"></i> Email: fptpoly@edu.vn
+                    </p>
+                </div>
+
+                <!-- Bản quyền -->
+                <div class="col-md-6 mb-3 text-md-end">
+                    <p class="mb-1">© 2026 FPT Polytechnic</p>
+                    <p class="mb-0">All rights reserved</p>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary">
+
+            <!-- Dòng cuối -->
+            <div class="text-center pb-2">
+                <small>Thiết kế cho bài ASM – Lập trình Web</small>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>

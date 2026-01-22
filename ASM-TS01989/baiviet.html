@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baiviet</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap JS (BẮT BUỘC) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .navbar-brand {
+            margin-right: 10px;
+            /* hoặc 0 nếu muốn sát hẳn */
+        }
+
+        #carouselExample img {
+            height: 350px;
+            /* chỉnh nhỏ / to tùy ý */
+            object-fit: cover;
+            /* ảnh không méo, cắt vừa khung */
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-info">
+        <div class="container">
+
+            <!-- LOGO -->
+            <a class="navbar-brand" href="trangchu.html">
+                <img src="images/logo1.png" alt="Logo" style="height: 50px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- MENU DÍNH SANG TRÁI -->
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="baiviet.html"><i class="fa-solid fa-list"></i> Bài viết</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sukien.html"><i class="fa-solid fa-calendar-days"></i> Sự kiện</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">
+                            <i class="fa-solid fa-circle-info"></i> Giới thiệu
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-user"></i> Tài khoản
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    Đăng nhập
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">
+                                    Đăng ký
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--banner-->
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/banner1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/banner2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/banner3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+   <div class="row row-cols-1 row-cols-md-4 g-4">
+
+    <!-- Video 1 -->
+    <div class="col">
+        <a href="video-detail?id=1" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm">
+                <img src="images/iphone1.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h6 class="fw-bold">Đánh giá iPhone mới nhất</h6>
+                    <p class="small text-muted mb-0">
+                        Hiệu năng, camera và pin có thực sự vượt trội?
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="col">
+        <a href="video-detail?id=2" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm">
+                <img src="images/samsung1.png" class="card-img-top">
+                <div class="card-body">
+                    <h6 class="fw-bold">Samsung Galaxy – Có đáng mua?</h6>
+                    <p class="small text-muted mb-0">
+                        Màn hình AMOLED và camera có gì nổi bật?
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="col">
+        <a href="video-detail?id=3" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm">
+                <img src="images/xiaomi1.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h6 class="fw-bold">Top điện thoại pin trâu 2026</h6>
+                    <p class="small text-muted mb-0">
+                        Dùng cả ngày dài không lo sạc pin.
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Video 4 -->
+    <div class="col">
+        <a href="video-detail?id=4" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm">
+                <img src="images/ip sam1.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h6 class="fw-bold">So sánh iPhone và Android</h6>
+                    <p class="small text-muted mb-0">
+                        Hệ điều hành nào phù hợp với bạn?
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Video 5 -->
+    <div class="col">
+        <a href="video-detail?id=5" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm">
+                <img src="images/vivo1.png" class="card-img-top">
+                <div class="card-body">
+                    <h6 class="fw-bold">Điện thoại chụp ảnh đẹp nhất</h6>
+                    <p class="small text-muted mb-0">
+                        Camera nào đang dẫn đầu?
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Video 6 -->
+    <div class="col">
+        <a href="video-detail?id=6" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm">
+                <img src="images/meo1.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h6 class="fw-bold">Mẹo dùng điện thoại bền hơn</h6>
+                    <p class="small text-muted mb-0">
+                        Kéo dài tuổi thọ pin & hiệu năng.
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Video 7 -->
+    <div class="col">
+        <a href="video-detail?id=7" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm">
+                <img src="images/gaming1.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h6 class="fw-bold">Điện thoại chơi game tốt nhất</h6>
+                    <p class="small text-muted mb-0">
+                        Hiệu năng mạnh, tản nhiệt tốt, pin trâu.
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Video 8 -->
+    <div class="col">
+        <a href="video-detail?id=8" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm">
+                <img src="images/trung.png" class="card-img-top">
+                <div class="card-body">
+                    <h6 class="fw-bold">Smartphone tầm trung đáng mua</h6>
+                    <p class="small text-muted mb-0">
+                        Giá hợp lý, cấu hình tốt trong năm 2026.
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Video 9 -->
+    <div class="col">
+        <a href="video-detail?id=9" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm">
+                <img src="images/gap1.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h6 class="fw-bold">Điện thoại gập có đáng mua?</h6>
+                    <p class="small text-muted mb-0">
+                        Công nghệ mới và trải nghiệm khác biệt.
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Video 10 -->
+    <div class="col">
+        <a href="video-detail?id=10" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm">
+                <img src="images/meo2.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h6 class="fw-bold">Mẹo tiết kiệm pin điện thoại</h6>
+                    <p class="small text-muted mb-0">
+                        Giúp pin bền hơn khi sử dụng hằng ngày.
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+</div>
+
+</body>
+
+</html>

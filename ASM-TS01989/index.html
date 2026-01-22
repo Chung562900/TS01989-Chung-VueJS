@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap JS (BẮT BUỘC) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+ <style>
+        .navbar-brand {
+            margin-right: 10px;
+            /* hoặc 0 nếu muốn sát hẳn */
+        }
+
+        /* Banner carousel */
+        .banner-img {
+            height: 420px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+<body>
+    
+ <nav class="navbar navbar-expand-md navbar-light bg-info">
+        <div class="container">
+
+            <!-- LOGO -->
+            <a class="navbar-brand" href="trangchu.html">
+                <img src="images/logo1.png" alt="Logo" style="height: 50px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- MENU DÍNH SANG TRÁI -->
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="baiviet.html"><i class="fa-solid fa-list"></i> Bài viết</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sukien.html"><i class="fa-solid fa-calendar-days"></i> Sự kiện</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">
+                            <i class="fa-solid fa-circle-info"></i> Giới thiệu
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-user"></i> Tài khoản
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    Đăng nhập
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">
+                                    Đăng ký
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+   
+    <!-- BANNER -->
+    <div id="carouselExampleIndicators" class="carousel slide mb-4">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner rounded shadow-sm">
+            <div class="carousel-item active">
+                <img src="images/banner1.jpg" class="d-block w-100 banner-img" alt="Banner 1">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/banner2.jpg" class="d-block w-100 banner-img" alt="Banner 2">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/banner3.jpg" class="d-block w-100 banner-img" alt="Banner 3">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+
+
+    <!-- ===== MODAL ĐĂNG NHẬP ===== -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">
+                        <i class="fa-solid fa-right-to-bracket"></i> Đăng Nhập
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form class="was-validated">
+                    <div class="modal-body">
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Nhập email" required>
+                            <div class="invalid-feedback">
+                                Vui lòng nhập email
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" placeholder="Nhập mật khẩu" required>
+                            <div class="invalid-feedback">
+                                Vui lòng nhập mật khẩu
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-info text-white w-100">
+                            Đăng Nhập
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

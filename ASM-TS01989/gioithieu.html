@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap JS (BẮT BUỘC) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+ <nav class="navbar navbar-expand-md navbar-light bg-info">
+        <div class="container">
+
+            <!-- LOGO -->
+            <a class="navbar-brand" href="trangchu.html">
+                <img src="images/logo1.png" alt="Logo" style="height: 50px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- MENU DÍNH SANG TRÁI -->
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="baiviet.html"><i class="fa-solid fa-list"></i> Bài viết</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sukien.html"><i class="fa-solid fa-calendar-days"></i> Sự kiện</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">
+                            <i class="fa-solid fa-circle-info"></i> Giới thiệu
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-user"></i> Tài khoản
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    Đăng nhập
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">
+                                    Đăng ký
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+   
+    <!-- BANNER -->
+    <div id="carouselExampleIndicators" class="carousel slide mb-4">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner rounded shadow-sm">
+            <div class="carousel-item active">
+                <img src="images/banner1.jpg" class="d-block w-100 banner-img" alt="Banner 1">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/banner2.jpg" class="d-block w-100 banner-img" alt="Banner 2">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/banner3.jpg" class="d-block w-100 banner-img" alt="Banner 3">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+
+
+    <!-- ===== GIỚI THIỆU WEBSITE ===== -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10 text-center">
+
+            <h2 class="mb-3 fw-bold text-info">
+                Chào mừng đến với bài viết kẹo 🍬
+            </h2>
+
+            <p class="lead">
+                Bài viết kẹo là website chuyên cung cấp các loại kẹo thơm ngon, đa dạng hương vị
+                dành cho mọi lứa tuổi. Chúng tôi mang đến cho bạn những sản phẩm chất lượng,
+                an toàn và giá cả hợp lý.
+            </p>
+
+            <p>
+                Tại đây, bạn có thể dễ dàng tìm thấy các loại kẹo truyền thống, kẹo nhập khẩu,
+                kẹo ngọt cho trẻ em và quà tặng kẹo cho những dịp đặc biệt.
+                Bài viết kẹo luôn sẵn sàng phục vụ và mang lại trải nghiệm mua sắm ngọt ngào nhất cho bạn.
+            </p>
+
+            <a href="trangchu.html" class="btn btn-info text-white mt-3 px-4">
+                Khám phá ngay
+            </a>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
