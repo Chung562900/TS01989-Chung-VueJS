@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap JS (BẮT BUỘC) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+
+    <style>
+        .navbar-brand {
+            margin-right: 10px;
+            /* hoặc 0 nếu muốn sát hẳn */
+        }
+
+        /* Banner carousel */
+        .banner-img {
+            height: 420px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<article class="col-md-8 position-relative">
+
+    <!-- NÚT BACK GÓC PHẢI -->
+    <a href="trangchu.html" 
+       class="btn btn-outline-primary position-absolute top-0 end-0 mt-2 me-2">
+        ← Trang chủ
+    </a>
+
+
+    <div class="container">
+        <!-- ========== MAIN ========== -->
+        <section class="row mt-4">
+            <!-- NỘI DUNG BÀI VIẾT -->
+            <article class="col-md-8">
+
+                <!-- TIÊU ĐỀ -->
+                <h2 class="text-info text-center mb-3">
+                    Những mẫu iPhone đáng mua nhất hiện nay
+                </h2>
+
+                <!-- ẢNH 1 -->
+                <img src="images/iphone2.jpg" class="img-fluid mb-3" width="700" height="700" alt="">
+
+                <!-- ĐOẠN 1 -->
+                <p style="text-align: justify;">
+                    iPhone luôn là dòng smartphone được ưa chuộng nhờ thiết kế sang trọng, hiệu năng mạnh mẽ
+                    và hệ sinh thái ổn định. Tuy nhiên, không phải mẫu iPhone nào cũng phù hợp với tất cả người
+                    dùng. Trong bài viết này, chúng ta sẽ cùng điểm qua những mẫu iPhone đáng mua nhất hiện nay
+                    dựa trên hiệu năng, giá thành và nhu cầu sử dụng.
+                </p>
+
+                <!-- TIÊU ĐỀ PHỤ -->
+                <h6 class="fw-semibold mt-3">
+                    iPhone 13 – Lựa chọn cân bằng nhất
+                </h6>
+
+                <p style="text-align: justify;">
+                    iPhone 13 được trang bị chip A15 Bionic mạnh mẽ, camera cải tiến cho chất lượng ảnh chụp
+                    tốt hơn trong điều kiện thiếu sáng và thời lượng pin được nâng cấp. Đây là mẫu iPhone
+                    phù hợp với đa số người dùng nhờ hiệu năng ổn định và mức giá hợp lý ở thời điểm hiện tại.
+                </p>
+
+                <!-- ẢNH 2 -->
+                <img src="images/ip13.jpg" class="img-fluid my-3" width="300" height="300" alt="">
+
+                <!-- TIÊU ĐỀ PHỤ -->
+                <h6 class="fw-semibold">
+                    iPhone 14 Pro – Trải nghiệm cao cấp
+                </h6>
+
+                <!-- DANH SÁCH -->
+                <ul>
+                    <li>Màn hình OLED 120Hz với Dynamic Island.</li>
+                    <li>Camera 48MP cho khả năng chụp ảnh chi tiết hơn.</li>
+                    <li>Chip A16 Bionic hiệu năng mạnh mẽ.</li>
+                    <li>Phù hợp cho người dùng yêu cầu trải nghiệm cao cấp.</li>
+                </ul>
+
+                <!-- TIÊU ĐỀ PHỤ -->
+                <h6 class="fw-semibold mt-3">
+                    iPhone 11 – Giá rẻ, vẫn rất tốt
+                </h6>
+
+                <p style="text-align: justify;">
+                    Dù đã ra mắt khá lâu, iPhone 11 vẫn là lựa chọn đáng cân nhắc trong phân khúc giá rẻ.
+                    Máy có hiệu năng ổn định, camera chụp ảnh tốt và thời gian sử dụng pin khá lâu,
+                    phù hợp với học sinh, sinh viên hoặc người dùng cơ bản.
+                </p>
+
+                <!-- KẾT LUẬN -->
+                <h6 class="fw-semibold">Lời kết</h6>
+                <p style="text-align: justify;">
+                    Việc lựa chọn iPhone phù hợp phụ thuộc vào nhu cầu và ngân sách của mỗi người.
+                    Nếu bạn cần hiệu năng cao và trải nghiệm mới nhất, hãy chọn các dòng Pro.
+                    Nếu ưu tiên giá thành và sự ổn định, các mẫu iPhone đời cũ vẫn là lựa chọn rất đáng mua.
+                </p>
+
+            </article>
+
+
+
+            <!-- BÌNH LUẬN -->
+            <aside class="col-md-4">
+
+                <h3 class="fw-semibold mb-2">
+                    Bình luận và viết tại đây
+                </h3>
+
+                <!-- FORM BÌNH LUẬN -->
+                <form class="mb-3">
+                    <textarea class="form-control mb-2" rows="3" placeholder="Nhập bình luận của bạn"></textarea>
+                    <button class="btn btn-success btn-sm">
+                        Gửi bình luận
+                    </button>
+                </form>
+
+                <!-- DANH SÁCH BÌNH LUẬN -->
+                <h6 class="fw-semibold">
+                    Danh sách các bình luận:
+                </h6>
+
+                <ul class="small">
+                    <li>Chung: Bài viết rất hữu ích</li>
+                    <li>Admin: Cảm ơn những chia sẻ bổ ích</li>
+                </ul>
+
+            </aside>
+
+        </section>
+
+
+    </div>
+
+</body>
+
+</html>

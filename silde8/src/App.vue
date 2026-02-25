@@ -1,0 +1,18 @@
+<script setup>
+</script>
+
+<template>
+  <h3>Trang chinh App.vue</h3>
+
+  <nav>
+    <RouterLink to="/">Go to Home</RouterLink>
+    <RouterLink to="/about">Go to About</RouterLink>
+  </nav>
+
+  <main>
+    <RouterView />
+  </main>
+</template>
+
+<style scoped>
+</style>

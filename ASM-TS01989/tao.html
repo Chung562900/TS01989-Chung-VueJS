@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap JS (BẮT BUỘC) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <body>
+
+<div class="container mt-5">
+
+    <!-- NÚT TẠO BÀI VIẾT -->
+    <div class="text-end mb-3">
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#createPost">
+            <i class="fa-solid fa-plus"></i> Tạo bài viết
+        </button>
+    </div>
+
+    <!-- FORM TẠO BÀI VIẾT -->
+    <div class="collapse" id="createPost">
+        <div class="card shadow-sm">
+            <div class="card-body">
+
+                <h5 class="card-title mb-3">
+                    <i class="fa-solid fa-pen-to-square"></i> Tạo bài viết mới
+                </h5>
+
+                <form>
+
+                    <!-- TIÊU ĐỀ -->
+                    <div class="mb-3">
+                        <label class="form-label">Tiêu đề bài viết</label>
+                        <input type="text" class="form-control" placeholder="Nhập tiêu đề">
+                    </div>
+
+                    <!-- NỘI DUNG -->
+                    <div class="mb-3">
+                        <label class="form-label">Nội dung</label>
+                        <textarea class="form-control" rows="5" placeholder="Nhập nội dung bài viết"></textarea>
+                    </div>
+
+                    <!-- UPLOAD ẢNH -->
+                    <div class="mb-3">
+                        <label class="form-label">Ảnh minh họa</label>
+                        <input type="file" class="form-control" accept="image/*">
+                    </div>
+
+                    <!-- NÚT -->
+                    <div class="text-end">
+                        <button type="reset" class="btn btn-secondary btn-sm">
+                            Hủy
+                        </button>
+                        <button type="submit" class="btn btn-success btn-sm">
+                            Đăng bài
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</body>
+</html>

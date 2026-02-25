@@ -1,0 +1,18 @@
+<template>
+  <LoginComponent v-if="!isLoggedIn" @loginSuccess="handleLogin"/>
+  <CommentComponent v-else :username="username" @logout="isLoggedIn=false"/>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import LoginComponent from './LoginComponent.vue'
+import CommentComponent from './CommentComponent.vue'
+
+const isLoggedIn = ref(false)
+const username = ref('')
+
+const handleLogin = (name) => {
+  username.value = name
+  isLoggedIn.value = true
+}
+</script>
